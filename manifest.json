@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "AdsSkipperRoPhim",
+  "description": "Skips RoPhim inserted HLS ad segments by rewriting playlist responses in-page.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/injected.js",
+        "src/playlist-filter.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "AdsSkipperRoPhim",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "src/service-worker.js"
+  }
+}

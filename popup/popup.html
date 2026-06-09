@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdsSkipperRoPhim</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="app-header">
+        <div>
+          <h1>AdsSkipper</h1>
+          <p>RoPhim HLS cleaner</p>
+        </div>
+        <span id="stateBadge" class="badge">Enabled</span>
+      </header>
+
+      <section class="controls" aria-label="Extension controls">
+        <label class="toggle">
+          <span>
+            <strong>Skip ads</strong>
+            <small>Rewrite matching HLS playlists</small>
+          </span>
+          <input id="enabled" type="checkbox">
+        </label>
+        <label class="toggle">
+          <span>
+            <strong>Debug logging</strong>
+            <small>Show console diagnostics</small>
+          </span>
+          <input id="debug" type="checkbox">
+        </label>
+      </section>
+
+      <section class="status" aria-label="Current status">
+        <div class="metric">
+          <span>Total removed</span>
+          <strong id="removedTotal">0</strong>
+        </div>
+        <div class="status-row">
+          <span>Last status</span>
+          <strong id="lastStatus">None</strong>
+        </div>
+        <div class="status-row">
+          <span>Last playlist</span>
+          <strong id="lastUrl">None</strong>
+        </div>
+      </section>
+
+      <section class="hosts" aria-label="Enabled website hosts">
+        <label for="allowedSitePatterns">Enabled website hosts</label>
+        <textarea id="allowedSitePatterns" spellcheck="false"></textarea>
+        <p>One host pattern per line. Example: <code>*.cobephim.*</code></p>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button id="savePatterns" class="primary" type="button">Save hosts</button>
+        <button id="refresh" type="button">Refresh</button>
+        <button id="reset" type="button">Reset counters</button>
+      </section>
+
+      <footer>Made by Sinon with <span aria-label="heart">❤️</span></footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

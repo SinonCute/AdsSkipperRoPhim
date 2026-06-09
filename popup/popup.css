@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 380px;
+  margin: 0;
+  color: #1f2937;
+  font: 14px/1.4 Arial, sans-serif;
+  background: #f8fafc;
+}
+
+main {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.app-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 2px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #166534;
+  background: #dcfce7;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.off {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.controls,
+.status,
+.hosts {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.toggle {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle span {
+  display: grid;
+  gap: 2px;
+}
+
+.toggle strong {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.toggle small,
+.status-row span,
+.metric span,
+.hosts label,
+.hosts p {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.metric {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.metric strong {
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.status-row {
+  display: grid;
+  gap: 3px;
+}
+
+.status-row strong {
+  max-width: 300px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+textarea {
+  width: 100%;
+  min-height: 58px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #0f172a;
+  font: 12px/1.35 Consolas, monospace;
+  background: #f8fafc;
+}
+
+.hosts p {
+  margin: 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 7px 8px;
+  color: #1f2937;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #f1f5f9;
+}
+
+button.primary {
+  border-color: #2563eb;
+  color: #ffffff;
+  background: #2563eb;
+}
+
+button.primary:hover {
+  background: #1d4ed8;
+}
+
+#reset {
+  grid-column: auto;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 11px;
+}
+
+footer span {
+  color: #ef4444;
+  font-weight: 700;
+}
