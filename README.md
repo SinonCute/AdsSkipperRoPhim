@@ -29,10 +29,10 @@ chrome://extensions
 
 3. Bật `Developer mode`.
 4. Bấm `Load unpacked`.
-5. Chọn thư mục:
+5. Chọn thư mục extension mà bạn vừa tải về hoặc vừa clone từ GitHub.
 
 ```text
-C:\Users\caoth\Code\WebstormProjects\AddsSkipperRoPhim
+AdsSkipperRoPhim
 ```
 
 6. Mở lại trang phim.
